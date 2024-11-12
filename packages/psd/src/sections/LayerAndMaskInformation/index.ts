@@ -54,7 +54,9 @@ export function parseLayerAndMaskInformation(
   );
 
   cursor.padding(cursor.position, 4);
-
+  if (cursor.position+4>cursor.length){
+    cursor.position=cursor.length-4;
+  }
   // Skip over Global layer mask info
   // https://www.adobe.com/devnet-apps/photoshop/fileformatashtml/#50577409_17115
   cursor.pass(cursor.read("u32"));

@@ -63,5 +63,8 @@
         "vite.config.ts"
       ]
     }
+  },
+  "dependencies": {
+    "@webtoon/psd": "file:"
   }
 }
